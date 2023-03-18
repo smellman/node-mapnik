@@ -3,7 +3,11 @@
 #include "mapnik_projection.hpp"
 
 #include <mapnik/datasource.hpp>
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/reprojection.hpp>
+#else
+#include <mapnik/geometry_reprojection.hpp>
+#endif
 #include <mapnik/util/geometry_to_geojson.hpp>
 #include <mapnik/util/geometry_to_wkt.hpp>
 #include <mapnik/util/geometry_to_wkb.hpp>

@@ -6,7 +6,11 @@
 #include <mapnik/util/feature_to_geojson.hpp>
 #include <mapnik/projection.hpp>
 #include <mapnik/proj_transform.hpp>
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/reprojection.hpp>
+#else
+#include <mapnik/geometry_reprojection.hpp>
+#endif
 #include <mapnik/datasource_cache.hpp>
 // mapnik-vector-tile
 #include "vector_tile_compression.hpp"

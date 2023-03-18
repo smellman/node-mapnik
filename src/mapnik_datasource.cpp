@@ -5,7 +5,11 @@
 
 // mapnik
 #include <mapnik/attribute_descriptor.hpp> // for attribute_descriptor
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>       // for box2d
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/datasource.hpp>           // for datasource, datasource_ptr, etc
 #include <mapnik/datasource_cache.hpp>     // for datasource_cache
 #include <mapnik/feature_layer_desc.hpp>   // for layer_descriptor

@@ -8,7 +8,11 @@
 #include <mapnik/map.hpp>
 #include <mapnik/layer.hpp>
 #include <mapnik/agg_renderer.hpp>   // for agg_renderer
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp> // for box2d
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/color.hpp>          // for color
 #include <mapnik/attribute.hpp>      // for attributes
 #include <mapnik/util/variant.hpp>   // for save_to_file, guess_type, etc

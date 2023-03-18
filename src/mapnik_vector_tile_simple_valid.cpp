@@ -7,9 +7,15 @@
 #include <mapnik/feature_factory.hpp>
 #include <mapnik/featureset.hpp>
 #include <mapnik/feature_kv_iterator.hpp>
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/is_simple.hpp>
 #include <mapnik/geometry/is_valid.hpp>
 #include <mapnik/geometry/reprojection.hpp>
+#else
+#include <mapnik/geometry_is_simple.hpp>
+#include <mapnik/geometry_is_valid.hpp>
+#include <mapnik/geometry_reprojection.hpp>
+#endif
 #include <mapnik/util/feature_to_geojson.hpp>
 #include <mapnik/projection.hpp>
 // mapnik-vector-tile

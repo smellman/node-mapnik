@@ -1,7 +1,11 @@
 #include "mapnik_projection.hpp"
 #include "utils.hpp"
 
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/proj_transform.hpp>
 #include <mapnik/projection.hpp>
 #include <sstream>

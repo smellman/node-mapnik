@@ -8,7 +8,11 @@
 #include <mapnik/layer.hpp>
 #include <mapnik/feature_factory.hpp>
 #include <mapnik/datasource_cache.hpp>
+#if MAPNIK_VERSION >= 400000
 #include <mapnik/geometry/box2d.hpp>
+#else
+#include <mapnik/box2d.hpp>
+#endif
 #include <mapnik/feature.hpp>
 #include <mapnik/featureset.hpp>
 #include <mapnik/memory_datasource.hpp>
